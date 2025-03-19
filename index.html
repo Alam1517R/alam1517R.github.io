@@ -3,61 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> TAWA TRAVEL- Viajes Inolvidables</title>
+    <title>TAWA TRAVEL - Cusco 5 Días</title>
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
-    <header>
-        <h1> TAWA TRAVEL</h1>
-        <p>Explora la magia del sur del Perú</p>
-        <a href="#destinos" class="btn">Descubre Más</a>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Descubre Cusco con TAWA TRAVEL </h1>
+            <p>Vive una experiencia inolvidable en el corazón de los Andes.</p>
+            <a href="#itinerario" class="btn" id="scrollBtn">Explora el Itinerario</a>
+        </div>
     </header>
 
-    <section id="destinos">
-        <h2>CUSCO 5 DIAS</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="IMG/cuscoOK.jpg" alt="Machu Picchu">
-                <h3>Día 1: Recorrido por la Ciudad</h3>
-                <p>Visita a Sacsayhuamán, Q'enqo, Puca Pucara y Tambomachay. Duración: 4 horas.</p>
-            </div>
-            <div class="card">
+    <section class="carrusel_imagenes">
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="IMG/cuscoOK.jpg" alt="Cusco">
                 <img src="IMG/Valle-Sagrado-de-los-Incas.webp" alt="Valle Sagrado">
-                <h3>Día 2: Valle Sagrado</h3>
-                <p>Tour completo por Chinchero, Maras, Moray, Ollantaytambo y Pisac.</p>
-            </div>
-            <div class="card">
                 <img src="IMG/Vinicunca.jpg" alt="Montaña de 7 Colores">
-                <h3>Día 3: Montaña de 7 Colores</h3>
-                <p> Caminata hasta la montaña por
-                    aproximadamente 45 - 60 minutos.</p>
-            </div>
-        </div>
-    </section>
-    <section id="destinos">
-        <div class="grid">
-            <div class="card">
                 <img src="IMG/machu-picchu.jpg" alt="Machu Picchu">
-                <h3>Día 4: Machu Picchu</h3>
-                <p>Viaje en tren a Aguas Calientes y tour guiado en Machu Picchu.</p>
+                <img src="IMG/laguna-humantay.jpg" alt="Laguna Humantay">
             </div>
-            <div class="card">
-                <img src="IMG/lagunahumantay.jpeg" alt="Laguna Humantay">
-                <h3>Día 5: Laguna de Humantay</h3>
-                <p>Excursión de día completo a la Laguna de Humantay.</p>
-            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
         </div>
     </section>
+    
 
-    <section class="contacto">
-        <h3>Contacto</h3>
-        <p>Teléfono: +51 962 741 386</p>
-        <p>Email: <a href="mailto:reservas@tawatrabel.com">reservas@tawatrabel.com</a></p>
+    <section id="itinerario" class="container">
+        <h2>🗺️ Itinerario Detallado</h2>
+    
+        <section class="box info-box yellow">
+            <div class="text">
+                <h3 class="texto-color">Día 1: Recorrido por la ciudad</h3>
+                <p class="texto-color">Aclimatación a la altitud y visita a sitios arqueológicos: Sacsayhuamán, Q'enqo, Puca Pucara y Tambomachay.</p>
+                <p class="texto-color">Duración: 4 horas.</p>
+            </div>
+            <img class="image" src="IMG/cuscoOK.jpg" alt="Recorrido por la ciudad">
+        </section>
+    
+        <section class="box info-box green">
+            <img class="image" src="IMG/Valle-Sagrado-de-los-Incas.webp" alt="Valle Sagrado">
+            <div class="text">
+                <h3 class="texto-color">Día 2: Valle Sagrado</h3>
+                <p class="texto-color">Tour de día completo visitando Chinchero, Maras, Moray, Ollantaytambo, Urubamba y Pisac.</p>
+                <p class="texto-color">Almuerzo buffet en Urubamba.</p>
+                <p class="texto-color">Duración: 12 horas.</p>
+            </div>
+        </section>
+    
+        <section class="box info-box yellow">
+            <div class="text">
+                <h3 class="texto-color">Día 3: Montaña de 7 Colores</h3>
+                <p class="texto-color">Excursión de día completo a Vinicunca, la Montaña de Colores.</p>
+                <p class="texto-color">Opciones de caballos o cuatrimotos (no incluidos). Visita opcional al Valle Rojo.</p>
+            </div>
+            <img class="image" src="IMG/Vinicunca.jpg" alt="Montaña de 7 Colores">
+        </section>
+    
+        <section class="box info-box green">
+            <img class="image" src="IMG/machu-picchu.jpg" alt="Machu Picchu">
+            <div class="text">
+                <h3 class="texto-color">Día 4: Machu Picchu</h3>
+                <p class="texto-color">Viaje en tren turístico a Aguas Calientes y visita guiada a Machu Picchu.</p>
+                <p class="texto-color">Regreso a Cusco.</p>
+            </div>
+        </section>
+    
+        <section class="box info-box yellow">
+            <div class="text">
+                <h3 class="texto-color">Día 5: Laguna de Humantay</h3>
+                <p class="texto-color">Excursión de día completo con caminata a la laguna de Humantay.</p>
+                <p class="texto-color">Opciones de caballos (no incluidos).</p>
+            </div>
+            <img class="image" src="IMG/lagunahumantay.jpeg" alt="Laguna de Humantay">
+        </section>
+    </section>
+    
+
+    <section id="contacto" class="container">
+        <h2>📞 Contáctanos</h2>
+        <p>¿Listo para tu aventura? ¡Déjanos un mensaje o contáctanos directamente!</p>
+    
+        <div class="contact-content">
+            <!-- Información de Contacto -->
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> <strong>Correo:</strong> <a href="mailto:info@tawatravel.com">info@tawatravel.com</a></p>
+                <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> <a href="tel:+51962741386">+51 962 741 386</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> Cusco, Perú</p>
+            </div>
+    
+            <!-- Formulario de Contacto -->
+            <form action="#" method="POST" class="contact-form">
+                <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+                <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                <button type="submit" class="btn">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+    
+    
+
+    <section id="recomendaciones" class="container">
+        <h2>Recomendaciones</h2>
+        <div class="box info-box blue">
+            <ul>
+                <li>Para el mal de altura, lo mejor es el descanso y una comida ligera durante las primeras horas en Cusco. También se recomienda tomar infusiones de coca y muña.</li>
+                <li>Debe portar en todo momento sus documentos de identidad.</li>
+                <li>El Boleto Turístico, en caso de pérdida, **no tiene duplicado**, es intransferible y tiene vigencia limitada. Es importante tomar las precauciones necesarias.</li>
+                <li>Para la compra de todos los ingresos solo se acepta **soles y dinero en efectivo**.</li>
+                <li>Para los paseos, lleve siempre **bloqueador solar, sombrero para el sol y poncho de lluvia** en temporada de lluvias.</li>
+                <li>🔹 <b>Visita a Machu Picchu:</b> Se recomienda usar **repelente de insectos y poncho de lluvia**. La zona está a **2400 m.s.n.m.**, con lluvias frecuentes.</li>
+                <li>🏔️ <b>Visita a la Montaña de Colores y Laguna Humantay:</b> Estaremos entre **5200 y 5400 m.s.n.m.**. Lleve **ropa de abrigo ligera para la caminata, zapatos de trekking, bloqueador solar, sombrero y lentes de sol**.</li>
+                <li>⚠️ Siempre siga las recomendaciones del **guía del grupo**. No intente explorar “caminos alternativos”.</li>
+            </ul>
+        </div>
+    </section>
+    
+
+    <section id="responsabilidad" class="container">
+        <h2>Responsabilidades del Pasajero</h2>
+        <div class="box info-box red">
+            <ul>
+                <li>La empresa no se responsabiliza por la pérdida de objetos personales durante los paseos.</li>
+                <li>En caso de tardanzas por parte del pasajero, no hay reprogramaciones debido a que todos los paseos son grupales y se tienen programados con anterioridad.</li>
+                <li>El servicio de cuatrimotos y caballos no está incluido en ninguno de los paseos.</li>
+                <li>Si el pasajero no cuenta con ingreso a Machu Picchu, se hace una modificación del precio e itinerario. Se pueden adicionar uno hasta dos días en Aguas Calientes.</li>
+            </ul>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 TAWA TRAVEL. Todos los derechos reservados.</p>
+        <div class="container">
+            <p>&copy; 2023 TAWA TRAVEL. Todos los derechos reservados.</p>
+        </div>
     </footer>
+
     <script src="JS/script.js"></script>
+</script>
 </body>
 </html>

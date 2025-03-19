@@ -1,121 +1,573 @@
+/* ==========================
+   ESTILOS GENERALES
+========================== */
+
 body {
     font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
     margin: 0;
     padding: 0;
-    text-align: center;
-    background: #F5B748;
+    line-height: 1.6;
+    color: #333; /* Color oscuro para mejor lectura */
 }
 
-/* HEADER */
-header {
-    background-image: url("IMG/Principal.jpg");
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+.hero {
+    background-image: url('IMG/cuscoOK.jpg');
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 40px 20px;
     text-align: center;
-    position: relative;
+    padding: 40px 20px;
 }
 
-header h1, header p, header a {
-    position: relative;
-    z-index: 2;
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 12px;
 }
 
-/* BOTÓN PRINCIPAL */
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.4em;
+    margin-bottom: 25px;
+}
+
 .btn {
     display: inline-block;
-    background: #ff5733;
+    background: #ff9800;
     color: white;
-    padding: 12px 25px;
-    font-size: 18px;
-    margin-top: 15px;
+    padding: 12px 24px;
     text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .btn:hover {
-    background: #ff2e00;
+    background: #e68900;
 }
 
-/* GRID PARA DESTINOS */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
+/* ==========================
+   ITINERARIO
+========================== */
+
+#itinerario {
+    background: #f8f9fa;
+    padding: 50px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* TARJETAS */
-.card {
+#itinerario h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #E8A100;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+}
+
+/* ==========================
+   SECCIÓN DE CADA DÍA
+========================== */
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* SECCIÓN CONTACTO */
-.contacto {
-    background: #fff3cd;
-    padding: 30px;
-    border-radius: 10px;
-    margin: 30px auto;
-    width: 80%;
+    border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.contacto h3 {
-    color: #d68a00;
-    font-size: 32px;
+.box:hover {
+    transform: scale(1.03);
+}
+
+/* COLORES MEJORADOS PARA LOS TEXTOS */
+
+.green {
+    background: #2E5B2F;
+    color: white;
+}
+
+.yellow {
+    background: #E1A42B;
+    color: #ffffff;
+}
+
+/* TEXTO EN CADA SECCIÓN */
+
+.text {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    color: white; /* Asegurar contraste adecuado */
+}
+
+.text h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.text p {
+    font-size: 1.1em;
+}
+
+/* IMÁGENES */
+
+.image {
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .image {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+}
+
+
+/* Sección de cada día */
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.03);
+}
+
+/* Alternar colores */
+.yellow {
+    border-left: 8px solid #E8A100;
+}
+
+.green {
+    border-left: 8px solid #28A745;
+}
+
+/* Texto */
+.text {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.text h3 {
+    font-size: 1.8em;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+/* Imagen */
+.image {
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación al hacer scroll */
+.box {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.box.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .image {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+}
+
+
+/* Estilo de las secciones */
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+/* Colores mejorados */
+.info-box.green {
+    background: #2E5B2F;
+    color: #ffffff;
+}
+
+.info-box.yellow {
+    background: #E1A42B;
+    color: #222;
+}
+
+/* Texto en cada sección */
+.text {
+    width: 55%;
+    font-size: 1.2em;
+}
+
+.text h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+/* Imágenes más grandes */
+.image {
+    width: 40%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Sección de contacto */
+#contacto {
+    background: #f8f9fa; /* Color suave */
+    color: #333;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+#contacto h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #E8A100; /* Amarillo dorado */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Texto y enlaces */
+#contacto p {
+    font-size: 1.2em;
     margin-bottom: 15px;
 }
 
-.contacto p {
-    font-size: 22px;
-}
-
-.contacto a {
-    font-size: 22px;
-    color: #d68a00;
+#contacto a {
+    color: #E8A100;
     text-decoration: none;
     font-weight: bold;
 }
 
-.contacto a:hover {
+#contacto a:hover {
     text-decoration: underline;
 }
 
-/* FOOTER */
-footer {
-    background: #222;
-    color: white;
-    padding: 15px;
-    margin-top: 30px;
+/* Contenedor flex */
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-/* RESPONSIVE */
+/* Información de contacto */
+.contact-info {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+    font-size: 1.1em;
+}
+
+.contact-info i {
+    color: #E8A100;
+    margin-right: 8px;
+}
+
+/* Formulario */
+.contact-form {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    background: #f8f9fa;
+}
+
+/* Botón */
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #E8A100;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background: #D18F00;
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
-    header {
-        padding: 150px 20px;
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-info {
+        text-align: center;
+    }
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 1.1em;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .contacto {
-        width: 95%;
+    .text, .image {
+        width: 100%;
     }
 
-    .btn {
-        font-size: 16px;
-        padding: 10px 20px;
+    .hero h1 {
+        font-size: 2.2em;
     }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.box {
+    opacity: 0; /* Inicia invisible */
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Nueva sección de responsabilidad */
+#responsabilidad {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#responsabilidad h2 {
+    font-size: 2.2em;
+    color: #D32F2F; /* Rojo oscuro para destacar */
+    margin-bottom: 20px;
+}
+
+/* Caja de información en rojo */
+.info-box.red {
+    background: #ffdddd; /* Fondo rojo suave */
+    color: #8B0000; /* Texto en rojo oscuro */
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 1.2em;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.info-box.red ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-box.red li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    text-align: left;
+}
+
+/* Agregar un icono visual antes de cada punto */
+.info-box.red li::before {
+    content: "⚠️"; /* Icono de advertencia */
+    position: absolute;
+    left: 0;
+}
+
+
+/* Nueva sección de recomendaciones */
+#recomendaciones {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#recomendaciones h2 {
+    font-size: 2.2em;
+    color: #1E88E5; /* Azul fuerte */
+    margin-bottom: 20px;
+}
+
+/* Caja de información en azul */
+.info-box.blue {
+    background: #E3F2FD; /* Azul claro */
+    color: #0D47A1; /* Azul oscuro */
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 1.2em;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.info-box.blue ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-box.blue li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    text-align: left;
+}
+
+/* Icono de check para cada recomendación */
+.info-box.blue li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+    color: #1E88E5;
+}
+
+
+/* Contenedor del carrusel */
+.carousel-container {
+    position: relative;
+    max-width: 900px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Carrusel de imágenes */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
